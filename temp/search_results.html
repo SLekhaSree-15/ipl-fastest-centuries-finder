@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Search Results</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Player Search Results</h1>
+        {% if results %}
+            <ul>
+                {% for venue, players in results.items() %}
+                    <h2>Venue: {{ venue }}</h2>
+                    {% for player in players %}
+                        <li>
+                            <strong>Player:</strong> {{ player.Player }} |
+                            <strong>Opponent:</strong> {{ player.Opponent }} |
+                            <strong>Runs:</strong> {{ player.Runs }} |
+                            <strong>Year:</strong> {{ player.Year }} |
+                            <strong>Balls Faced:</strong> {{ player['Balls Faced'] }}
+                        </li>
+                    {% endfor %}
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No results found for the player!</p>
+        {% endif %}
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>
