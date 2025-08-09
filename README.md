@@ -1,93 +1,36 @@
-# Python Flask ReplAuth
+🏏 IPL Fastest Century Finder ⏱️
+Project Overview
+The IPL Fastest Century Finder is a data-driven tool designed to analyze IPL match data and identify the fastest centuries scored by players. It helps cricket enthusiasts quickly access and compare outstanding batting performances.
 
-Using the ReplAuth with Flask is super easy! First we create a new Flask app: 
+Key Features
+📂 Upload and process IPL match datasets
 
-<details>
-  <summary>Import Flask and create new Flask app</summary>
+🔍 Search and find the fastest centuries by players
 
-```python
-from flask import Flask, render_template, request
-app = Flask('app')
-@app.route('/')
-```
-</details>
+📊 Display detailed stats including player name, runs, balls faced, and match info
 
-And then we request the headers: 
+⚡ Efficient data filtering and sorting for quick results
 
-<details>
-  <summary>Requested Headers:</summary>
+Technology Stack
+🐍 Python
 
-```python
-def hello_world():
-    print(request.headers)
-    return render_template(
-        'index.html',
-        user_id=request.headers['X-Replit-User-Id'],
-        user_name=request.headers['X-Replit-User-Name'],
-        user_roles=request.headers['X-Replit-User-Roles'],
-        user_bio=request.headers['X-Replit-User-Bio'],
-        user_profile_image=request.headers['X-Replit-User-Profile-Image'],
-        user_teams=request.headers['X-Replit-User-Teams'],
-        user_url=request.headers['X-Replit-User-Url']
-    )
-```
-</details>
+📊 Data analysis with pandas, numpy
 
-In this code we've requested all the possible headers, which are these:
+📈 Visualization tools (optional)
 
-<details>
-  <summary>All Replit Headers</summary>
+💻 User-friendly interface for querying data (optional)
 
-```python
-X-Replit-User-Bio
-X-Replit-User-Id
-X-Replit-User-Name
-X-Replit-User-Profile-Image
-X-Replit-User-Roles
-X-Replit-User-Teams
-X-Replit-User-Url
-```
-</details>
+How It Works
+The system processes IPL match data containing batting records. It filters centuries and ranks them by the number of balls taken to reach 100 runs, providing a list of the fastest centuries along with relevant match details.
 
-Once we've requested all these headers, we can show the information we've got after the user has passed through the Auth. This info will be displayed on the console, but can also be displayed in a html file.
+Applications
+🏆 Cricket analytics and fan engagement
 
-We can show this by displaying the variable assigned to a header in a HTML tag (it can also be shown without a tag). If we wanted to show the username of the user we would put this:
+📅 Historical IPL performance reviews
 
-```html
-<h1>{{ user_name }}</h1>
-```
+📢 Commentary and sports journalism support
 
-And the output will be a heading (h1) with the username. 
+📚 Cricket data research and insights
 
-# ReplAuth FAQ 
-
-The question is in a quote and in italic and the answer is in a bullet point.
-
-<details>
-  <summary>ReplAuth FAQ</summary>
-  
-  > *How many ReplAuths are there?*
-  
-  - There are 2 repl auths!
- ---
-  > *Which ReplAuths are there?*
-  
-  - Node.js and Python Flask
----
-  > *Is there a Replit Documentation on ReplAuths?*
-
-  - Yes! You can find it in the [Replit Docs](https://docs.replit.com)
-</details>
-
-# Template
-
-**Name**: Python Flask ReplAuth
-
-**Description**: Python Flask ReplAuth is easy and useful to use! What are you waiting for? Start using ReplAuth today!
-
-# Questions?
-
-If you have any question please look at our support resources:
-
-- [Replit Docs](https://docs.replit.com)
-- [Ask forum](https://ask.replit.com)
+Contribution
+Contributions to improve data processing, add new features, or enhance user interaction are welcome! Feel free to open issues or submit pull requests.
